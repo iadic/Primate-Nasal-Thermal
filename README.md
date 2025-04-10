@@ -7,83 +7,55 @@ Below is an overview of each file in this repository: what is contained and how 
 
 ## Fence Mitigation
 
-> All notebooks in this section were run on **Google Colab** (also compatible with **Jupyter Notebook**).
+All notebooks in this section were run on **Google Colab** but can be compatible with **Jupyter Notebook**.
 
 ### 1) All Fence Detection  
-Demonstrates six visual methods for qualitative fence detection:
+This file contains 6 methods for qualitative fence detection:
 - Edge detection (Sobel filter, morphological operations)  
 - Hough Line Transforms (Standard and Probabilistic)  
 - Temperature thresholding  
 - Hybrid approach: temperature thresholding followed by standard Hough Transform
 
 ### 2) Best Fence Detection  
-Quantitatively compares four methods (Standard Hough, Probabilistic Hough, temperature thresholding, and hybrid) using four annotated ground-truth images.  
-📂 Ground truth masks and images are located in the `Ground Truth Fence Masks` folder.
+This file is a quantitative evaluation of the best previous fence detection methods: Standard Hough, Probabilistic Hough, temperature thresholding, and hybrid approach.
+Quantitative evaluation is possible thanks to 4 manually annotated ground-truth images located in the Ground truth masks folder. Their respective thermal images are also in that folder. Image number matches ground truth fence label e.g. 1.csv frame will match mask_1.tif labelling.
 
 ### 3) All Inpainting  
-Shows a **qualitative comparison** of different inpainting techniques:
+Qualitative comparison of 4 inpainting techniques:
 - Navier-Stokes  
 - Telea  
 - Biharmonic  
 - SIREN (neural implicit inpainting)
 
 ### 4) Best Inpainting Compared  
+Using the best inpainting methods, SIREN and Biharmonic inpainting where tested quantitativly using an artificial fence frame.
+Images to test inpainting, fencing, and the non-fenced primate image are al in "Sample Images" folder.
 Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using artificial fence masks.  
-📂 Sample images for testing inpainting methods are located in the `Sample Images` folder.
 
----
+## Labelling Process
+The process of semi-manually labelling the primates nose for U-Net training is in this file: Semi-automatic Labelling. Example data to test out hwo the labels are generates is in the zip file: labelling.zip. 
 
-## ✏️ Labelling Process
 
-These notebooks create a custom dataset for **U-Net-based nose segmentation**.
-
-- `Semi-automatic Labelling`: Allows user input to select the nose point and generate a binary mask (used when Lucas-Kanade fails).
-- `Example data for labelling.zip`: Contains a sample video sequence to demonstrate the labeling process.
-
-> **Note:** Some files require `tkinter` for GUI-based user interaction, so must be run in a local Jupyter Notebook environment (not Colab).
-
----
-
-## 🧠 Tracking
+##Tracking
+The rest of the files were written in vscode using a Jupter notebook and virtual environments. These files cannot be run in google colab as they require `tkinter` library for GUI-based user interaction. Zip file called: "test_sequence_for_tracking.zip" contains a primate video sequence, in the form of indiviudal csv raw temperature frames. The sequence chosen was not the only one tested, but it is a good test because it is a difficult clip due to primate moving, camera moving, and lighting changing. 
 
 ### 5) Lucas-Kanade Tracking  
-Explores different Lucas-Kanade-based methods:
-- Plain Lucas-Kanade  
+Notebook shows different implementations of Lucas-Kanade-based tracking:
+- Standard Lucas-Kanade (only click at the start what feature to track)
 - Lucas-Kanade with Kalman filter  
-- Lucas-Kanade with manual re-detection fallback
+- Lucas-Kanade with manual re-detection as a fallback
 
 ### 6) U-Net Tracking  
-Uses a trained U-Net to detect and track the nose region frame-by-frame.  
-🔗 **Model weights download link:** [Insert your Google Drive or Hugging Face link here]
+File showing how to use a trained U-Net to detect primates nose and track it across frames.
+Please note, the final model's weights have been uploaded to Canvas source code. Alternatively they are found in this google drive:
 
 ### 7) U-Net Training  
-Notebook used to train the U-Net segmentation model, run on **Kaggle** with GPU acceleration. Shows the full training pipeline and preprocessing for primate nose segmentation.
+This notebook shows how the U-Net model used for nose detecting was trained. Note, Kaggle was used for implementing this notebook as it offer's GPU acceleration. For training the U-Net GPU acceleration is recommended. 
 
-📂 `test_sequence_for_tracking.zip`: A difficult, unseen test sequence (in CSV format) used to evaluate how well various tracking methods perform.
-
----
-
-## 🎥 Video Examples
-
-These `.mp4` videos demonstrate the performance of different methods:
-
+## Video Examples
+This folder contains mp4 videos that show the performance of different methods:
 - **Lucas-Kanade fallback on U-Net**: First tries Lucas-Kanade, then U-Net, then manual correction if both fail.
-- **Lucas-Kanade + Kalman Filter**: Combines both techniques for smoother tracking.
-- **U-Net Only**: Uses only the U-Net for detection and tracking.
-- **Lucas-Kanade + Inpainting**: Shows how different fence segmentation methods, combined with biharmonic inpainting and Lucas-Kanade tracking, affect overall performance.
+- **Lucas-Kanade and Kalman Filter**: Combines both techniques to attempt smoother tracking.
+- **U-Net Only**: Uses only the U-Net for nose detection and tracking.
+- **Only Lucas-Kanade**: Shows how different fence segmentation methods (listed above), combined with biharmonic inpainting, affect  Lucas-Kanade tracking. Temperature had the best performance. 
 
----
-
-## 📁 Folder Summary (Optional)
-> _Add this if you'd like a quick map of the folder layout_
-
-```bash
-Primate-Nasal-Thermal/
-├── Fence Mitigation/
-├── Labeling Process/
-├── Tracking/
-├── Sample Images/
-├── Ground Truth Fence Masks/
-├── test_sequence_for_tracking.zip
-├── videos/
-├── README.md
