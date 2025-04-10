@@ -29,7 +29,7 @@ Qualitative comparison of 4 inpainting techniques:
 
 ### 4) Best Inpainting Compared  
 Using the best inpainting methods, SIREN and Biharmonic inpainting where tested quantitatively using an artificial fence frame.
-Images to test inpainting and fence detection (as well as artificial fence frame) are in "Sample Images" folder.
+Images to test inpainting and fence detection (as well as the artificial fence mask) are in "Sample Images" folder.
 Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using artificial fence masks.  
 
 ## Labelling Process
