@@ -33,11 +33,11 @@ Images to test inpainting and fence detection (as well as the artificial fence m
 Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using artificial fence mask.  
 
 ## Labelling Process
-The process of semi-manually labelling the primates nose for U-Net training is in this file: Semi-automatic Labelling. Example data to test out hwo the labels are generates is in the zip file: labelling.zip. 
+The process of semi-manually labelling the primates nose for U-Net training is in this file: Semi-automatic Labelling. Example data to test out how the labels are generates is in the zip file: labelling.zip. 
 
 
 ##Tracking
-The rest of the files were written in vscode using a Jupter notebook and virtual environments. These files cannot be run in google colab as they require `tkinter` library for GUI-based user interaction. Zip file called: "test_sequence_for_tracking.zip" contains a primate video sequence, in the form of indiviudal csv raw temperature frames. The sequence chosen was not the only one tested, but it is a good test because it is a difficult clip due to primate moving, camera moving, and lighting changing. 
+The rest of the files were written in vscode using a Jupter notebook and virtual environments. These files cannot be run in google colab as they require `tkinter` library for GUI-based user interaction. Zip file called: "test_sequence_for_tracking.zip" contains a primate video sequence, in the form of individual csv raw temperature frames. The sequence chosen was not the only one tested, but it is a good test because it is a difficult clip due to primate moving, camera moving, and the lighting changing. 
 
 ### 5) Lucas-Kanade Tracking  
 Notebook shows different implementations of Lucas-Kanade-based tracking:
@@ -57,5 +57,5 @@ This folder contains mp4 videos that show the performance of different methods:
 - **Lucas-Kanade fallback on U-Net**: First tries Lucas-Kanade, then U-Net, then manual correction if both fail.
 - **Lucas-Kanade and Kalman Filter**: Combines both techniques to attempt smoother tracking.
 - **U-Net Only**: Uses only the U-Net for nose detection and tracking.
-- **Only Lucas-Kanade**: Shows how different fence segmentation methods (listed above), combined with biharmonic inpainting, affect  Lucas-Kanade tracking. Temperature had the best performance. 
+- **Only Lucas-Kanade**: Shows how different fence segmentation methods (listed above), combined with biharmonic inpainting, affect Lucas-Kanade tracking. Temperature had the best performance. 
 
