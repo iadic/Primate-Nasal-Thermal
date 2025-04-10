@@ -1,3 +1,2 @@
 # Primate-Nasal-Thermal
-balbal a
-ablaba 
+This respository store's all main code used to create my final year dissertation project on Primate Nasal Temperature Tracking in Thermal imaging.
