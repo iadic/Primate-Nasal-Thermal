@@ -30,7 +30,7 @@ Qualitative comparison of 4 inpainting techniques:
 ### 4) Best Inpainting Compared  
 Using the best inpainting methods, SIREN and Biharmonic inpainting where tested quantitatively using an artificial fence frame.
 Images to test inpainting and fence detection (as well as the artificial fence mask) are in "Sample Images" folder.
-Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using artificial fence masks.  
+Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using artificial fence mask.  
 
 ## Labelling Process
 The process of semi-manually labelling the primates nose for U-Net training is in this file: Semi-automatic Labelling. Example data to test out hwo the labels are generates is in the zip file: labelling.zip. 
