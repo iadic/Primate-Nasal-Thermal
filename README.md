@@ -57,5 +57,5 @@ This folder contains mp4 videos that show the performance of different methods:
 - **Lucas-Kanade fallback on U-Net**: First tries Lucas-Kanade, then U-Net, then manual correction if both fail.
 - **Lucas-Kanade and Kalman Filter**: Combines both techniques to attempt smoother tracking.
 - **U-Net Only**: Uses only the U-Net for nose detection and tracking.
-- **Only Lucas-Kanade**: Shows how different fence segmentation methods (listed above), combined with biharmonic inpainting, affect Lucas-Kanade tracking. Temperature had the best performance. 
+- **Only Lucas-Kanade**: Shows how different fence segmentation methods (listed above), combined with biharmonic inpainting, affect Lucas-Kanade tracking. Temperature thresholding had the best performance. 
 
