@@ -1,12 +1,11 @@
-# 🐵 Primate-Nasal-Thermal
+# 🐵🐵 Primate-Nasal-Thermal 🐵🐵
 
-This repository contains all the core code used in my final year dissertation project: **Primate Nasal Temperature Tracking in Thermal Imaging**.
+This repository contains all the main source code used for my final year dissertation project on: **Primate Nasal Temperature Tracking in Thermal Imaging**.
+(See report write up for explaination).
 
-Below is an overview of each section and how to run the associated files.
+Below is an overview of each file in this repository: what is contained and how to run it.
 
----
-
-## 📦 Fence Mitigation
+## Fence Mitigation
 
 > All notebooks in this section were run on **Google Colab** (also compatible with **Jupyter Notebook**).
 
