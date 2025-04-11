@@ -47,7 +47,7 @@ Notebook shows different implementations of Lucas-Kanade-based tracking:
 
 ### 6) U-Net Tracking  
 File showing how to use a trained U-Net to detect primates nose and track it across frames.
-Please note, the final model's weights have been uploaded to Canvas source code only.
+Please note, the final model's weights have been uploaded to Canvas source code only. In canvas source code it can be found in the folder Tracking code, the file is called "Model_best.pth".
 
 ### 7) U-Net Training  
 This notebook shows how the U-Net model used for nose detecting was trained. Note, Kaggle was used for implementing this notebook as it offer's GPU acceleration. For training the U-Net GPU acceleration is recommended. 
