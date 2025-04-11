@@ -36,7 +36,7 @@ Performs a **quantitative comparison** of SIREN vs. Biharmonic inpainting using 
 The process of semi-manually labelling the primates nose for U-Net training is in this file: Semi-automatic Labelling. Example data to test out how the labels are generates is in the zip file: labelling.zip. 
 
 
-##Tracking
+## Tracking
 The rest of the files were written in vscode using a Jupter notebook and virtual environments. These files cannot be run in google colab as they require `tkinter` library for GUI-based user interaction. Zip file called: "test_sequence_for_tracking.zip" contains a primate video sequence, in the form of individual csv raw temperature frames. The sequence chosen was not the only one tested, but it is a good test because it is a difficult clip due to primate moving, camera moving, and the lighting changing. 
 
 ### 5) Lucas-Kanade Tracking  
