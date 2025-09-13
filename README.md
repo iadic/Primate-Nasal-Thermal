@@ -5,6 +5,17 @@ This repository contains all the main source code used for my final year dissert
 
 Below is an overview of each file in this repository: what is contained and how to run it.
 
+## Final Model
+There were two final methods: 
+- Model A (CNN): Fully automatic but sometimes inaccurate and computationally intensive.
+- Model B: (Lucas-kanade with manual re-initialisation): Semi-automatic, but more reliable and still reduces manual effort.
+  
+Model B is the recommended option. This folder contains everything needed to run it:
+- Dependencies: Instructions and files to install required libraries.
+- Lucas-Kanade Semi-Automatic: Code to track the primate nose and extract temperature.
+
+The other folders document the techniques, methods, and models explored throughout the dissertation, showing the experiments and approaches tested for different parts of the problem.
+
 ## Fence Mitigation
 
 All notebooks in this section were run on **Google Colab** but can be compatible with **Jupyter Notebook**.
